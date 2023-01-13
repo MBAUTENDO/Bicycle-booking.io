@@ -1,0 +1,145 @@
+@media only screen and (max-width: 575px){
+/*  X-small*/
+
+header{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.slide{
+    display: none;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.map-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 50px;
+}
+
+.informations {
+    width: 100%;
+}
+
+.titre-informations {
+    font-size: 15px;
+}
+
+.modal {
+    position: sticky;
+}
+
+ .modal-content {
+        margin: 25% auto;
+        width: auto;
+        padding: 0;
+        height: auto;
+ }
+
+.div-input {
+    margin: 10px;
+}
+
+.validation,
+.effacer {
+    margin-right: 5px;
+}
+
+
+.validation,
+.effacer,
+.annulation,
+.annuler {
+    color: white;
+    font-size: 15px;
+}
+
+.temps {
+    font-size: 15px;
+}
+
+}
+
+@media only screen and (min-width:576px) and (max-width: 767px){
+
+/*  Small*/
+
+.map-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 50px;
+}
+
+.informations {
+    width: 100%;
+}
+
+.titre-informations {
+    font-size: 15px;
+}
+
+.modal {
+    position: sticky;
+}
+
+.validation,
+.effacer,
+.annulation,
+.annuler {
+    color: white;
+    font-size: 20px;
+}
+
+.temps {
+    font-size: 20px;
+}
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px){
+
+
+
+.informations {
+    width: 100%;
+}
+
+.titre-informations {
+    font-size: 15px;
+}
+
+.informations-stations {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.modal {
+    position: sticky;
+}
+
+.validation,
+.effacer,
+.annulation,
+.annuler {
+    color: white;
+    font-size: 20px;
+}
+
+.temps {
+    font-size: 20px;
+}
+
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1024px){
+
+
+.modal {
+    position: sticky;
+}
+
+}

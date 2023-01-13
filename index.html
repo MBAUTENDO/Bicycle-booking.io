@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+        <title>Bicycle | V</title>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="stylesheet" type="text/css" href="css/responsive.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    </head>
+    <body>
+        <!--- section header --->
+        <header>
+            <div class="logo">
+                Bicycle 'V'
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#notes">instructions</a></li>
+                    <li class="logo-v">|</li>
+                    <li><a href="#map-stations">reservations</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!--- end of section header --->
+        <!-- Section qui contient le diaporama -->
+        <section id="notes">
+            <div class="slider-container">
+                <i class="fas fa-chevron-left "></i>
+                <i class="fas fa-chevron-right "></i>
+                <img src="images/velo.jpg">
+                <div class="slide">
+                    <h2>Bienvenue dans notre belle ville</h2>
+                </div>
+                <div class="slide">
+                    <p>Sélectionnez une station sur la carte, dans laquelle vous souhaitez réserver votre vélo'v<br />
+                        Vous pouvez bouger et zoomer sur la carte.<br />
+                    </p>
+                </div>
+                <div class="slide">
+                     <p>
+                       Pour réserver, cliquez sur le bouton de réservation, signez puis validez.<br />
+                       Vous pouvez réserver qu'un vélo'v à la fois. Si une nouvelle réservation a lieu, elle remplace la précédentes.<br />
+                    </p>
+                </div>
+                <div class="slide">
+                    <p>
+                       Pour réserver, cliquez sur le bouton de réservation, signez puis validez.
+                       Vous pouvez réserver qu'un vélo'v à la fois.<br />
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- Google Maps et details de la station -->
+        <section id="map-stations" class="map-stations">
+            <h2 id="reservation-ancre" class="section-titre reservation-ancre">Réserver votre Bicycle</h2>
+            <div class="map-info">
+                <div id="map" class="map"></div>
+                <div id="informations" class="informations">
+                    <h3 class="titre-informations">Détails de la station</h3>
+                    <div class="contenu-text-informations">
+                        <div class="text-informations">Sélectionner une station pour afficher ses informations correspondante.</div>
+                        <div class="contenu-info-station hide">
+                            <p id="etat" class="informations-stations">État : <span id="etat-station" class="  informations-stations-span"></span></p>
+                            <p class="informations-stations">Nom  de la station : <span id="nom-station" class="informations-stations-span"></span></p>
+                            <p class="informations-stations">Adresse : <span id="adresse-station" class="informations-stations-span"></span></p>
+                            <p class="informations-stations place-dispo-station"><span id="texte-place-station"></span><span id="numero-place-station" class="informations-stations-span"></span></p>
+                            <p class="informations-stations info"><span id="texte-velo-station"></span><span id="numero-velo-station" class="informations-stations-span"></span></p>
+                            <p class="reservation-txt"></p>
+                        </div>
+                        <div class="contenu-reservation">
+                            <input class="reservation hide" type="button" value="Réserver ">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Signature pour la réservation -->
+
+        <section id="modal-signature" class="modal hide">
+            <div id="canvas-signature" class="canvas-signature modal-content">
+                <span class="close"><i class="far fa-times-circle" data-close="modal-signature" ></i></span>
+                <h2 class="section-titre">Signature</h2>
+                <p class="titre-signature"></p>
+                <canvas class="signature" id="signature"></canvas>
+                <div class="div-input">
+                    <input class="validation hide" type="submit" value="Validation" />
+                    <input class="effacer" type="submit" value="Effacer" />
+                    <input data-close="modal-signature" class="annuler" type="submit" value="Annuler" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Compteur de la réservation -->
+
+        <section class="temps">
+            <span class="texteReservation">Aucune réservation en cours.</span>
+            <span class="texteCompteur"></span><br />
+            <input class="annulation hide" type="submit" value="Annuler la réservation" />
+        </section>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>  
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBn9BcEOcI9iGV7ZrWBSFjynOtO4olGGzQ" async defer></script>       
+        <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+        <!-- Fichiers JavaScript personnalisés -->
+        <script src="./js/slider.js"></script>
+        <script src="./js/compteur.js"></script>
+        <script src="./js/stations.js"></script>
+        <script src="./js/dom.js"></script>
+        <script src="./js/map.js"></script>
+        <script src="./js/canvas.js"></script>
+        <script src="./js/utiles.js"></script>
+        <script src="./js/modal.js"></script>
+        <script src="./js/menu-actif.js"></script>
+        <script src="./js/main.js"></script>
+    </body>
+</html>
